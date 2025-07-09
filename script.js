@@ -34,9 +34,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("click", enableAudio);
 });
-
-// Optional: Toggle music mute/unmute (used with .music-toggle button)
-function toggleMusic() {
-  const music = document.getElementById("bg-music");
-  music.muted = !music.muted;
-}
