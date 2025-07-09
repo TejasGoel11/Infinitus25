@@ -105,16 +105,3 @@ footer {
   letter-spacing: 2px;
   text-shadow: none;
 }
-
-.music-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #00ffff;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0 0 10px #00ffff88;
-}
