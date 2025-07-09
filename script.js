@@ -20,5 +20,23 @@ const timer = setInterval(() => {
   countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }, 1000);
 
-// Background music will autoplay via the <audio> tag in HTML
-// No JavaScript needed for autoplay unless browser blocks it
+// Background music autoplay after user interaction
+document.addEventListener("DOMContentLoaded", () => {
+  const music = document.getElementById("bg-music");
+
+  // Attempt autoplay on click
+  const enableAudio = () => {
+    music.play().catch(() => {
+      console.log("Autoplay blocked. User interaction required.");
+    });
+    window.removeEventListener("click", enableAudio);
+  };
+
+  window.addEventListener("click", enableAudio);
+});
+
+// Optional: Toggle music mute/unmute (used with .music-toggle button)
+function toggleMusic() {
+  const music = document.getElementById("bg-music");
+  music.muted = !music.muted;
+}
